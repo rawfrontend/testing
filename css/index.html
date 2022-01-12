@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <meta name="color-scheme" content="dark light"> // does it work? -->
+  <title>CSS | rawfrontend</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Cousine&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="../styles.css">
+  <script async src="../scripts.js"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+  <link rel="manifest" href="../favicon/site.webmanifest">
+  <meta name="description" content="CSS articles preview.">
+  <meta name="author" content="Pedro F. Soares">
+</head>
+
+<body>
+  <header>
+    <h1>
+      <a href="../index.html"><span class="raw">raw</span>frontend</a>
+    </h1>
+  </header>
+
+  <nav>
+    <input type="checkbox">
+    <span class="material-icons">menu</span>
+    <span class="material-icons">close</span>
+    <div>
+      <p>
+        <a href="../index.html"><span class="raw">raw</span>frontend</a>
+      </p>
+      <ul>
+        <li>
+          <a href="../index.html">ALL ARTICLES</a>
+        </li>
+        <li>
+        <li>
+          <a href="../html/index.html">
+            <abbr title="HyperText Markup Language">HTML</abbr>
+          </a>
+        </li>
+        <li>
+          <a href="index.html" class="highlight">
+            <abbr title="Cascading Style Sheets">CSS</abbr>
+          </a>
+        </li>
+        <li>
+          <a class="unavailable">
+            <abbr>HTML</abbr> + <abbr>CSS</abbr>
+          </a>
+        </li>
+        <li>
+          <a class="unavailable">JAVASCRIPT</a>
+        </li>
+        <li>
+          <a href="../readme.html">README</a>
+        </li>
+      </ul>
+      <address>
+        <ul>
+          <li>
+            <a href="https://twitter.com/rawfrontend" target="_blank">
+              <img src="../images/logos/twitter.png"
+                   alt="rawfrontend's Twitter account">
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/rawfrontend" target="_blank">
+              <img src="../images/logos/github.png"
+                   alt="rawfrontend's GitHub account">
+            </a>
+          </li>
+        </ul>
+      </address>
+    </div>
+  </nav>
+
+  <main class="previews center">
+    <section>
+      <header>
+        <h2><abbr title="Cascading Style Sheets">CSS</abbr></h2>
+      </header>
+
+      <article>
+        <header>
+          <a href="#">
+            <abbr title="Cascading Style Sheets">CSS</abbr>
+          </a>
+          <h3>Mobile Safari "auto" zoom in landscape orientation</h3>
+        </header>
+        <footer>
+          <p>
+            <span class="material-icons">today</span>
+            <time datetime="2022-01-05">
+              <abbr title="January">JAN</abbr> 05, 2022
+            </time>
+          </p>
+        </footer>
+        <figure>
+          <img src="../images/responsive-meta-preview.png"
+               alt="Two cropped iPhone screenshots displaying a web page
+                    rendered at different scales.">
+        </figure>
+        <p>
+          Setting the viewport is a crucial first step in a
+          <b>Responsive Web Design</b> strategy.
+        </p>
+        <div><a href="zoom-landscape.html">READ</a></div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p><small>&copy; 2022 rawfrontend</small></p>
+  </footer>
+</body>
+</html>

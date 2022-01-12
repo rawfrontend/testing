@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <meta name="color-scheme" content="dark light"> // does it work? -->
+  <title>iPhone "auto" zoom in landscape orientation | CSS | rawfrontend</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Cousine&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="../styles.css">
+  <script async src="../scripts.js"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+  <link rel="manifest" href="../favicon/site.webmanifest">
+  <!-- <meta name="description" content=""> -->
+  <meta name="author" content="Pedro F. Soares">
+</head>
+
+<body>
+  <header>
+    <h1>
+      <a href="../index.html"><span class="raw">raw</span>frontend</a>
+    </h1>
+  </header>
+
+  <nav>
+    <input type="checkbox">
+    <span class="material-icons">menu</span>
+    <span class="material-icons">close</span>
+    <div>
+      <p>
+        <a href="../index.html"><span class="raw">raw</span>frontend</a>
+      </p>
+      <ul>
+        <li>
+          <a href="../index.html">ALL ARTICLES</a>
+        </li>
+        <li>
+          <a href="../html/index.html">
+            <abbr title="HyperText Markup Language">HTML</abbr>
+          </a>
+        </li>
+        <li>
+          <a href="index.html">
+            <abbr title="Cascading Style Sheets">CSS</abbr>
+          </a>
+        </li>
+        <li>
+          <a class="unavailable">
+            <abbr>HTML</abbr> + <abbr>CSS</abbr>
+          </a>
+        </li>
+        <li>
+          <a class="unavailable">JAVASCRIPT</a>
+        </li>
+        <li>
+          <a href="../readme.html">README</a>
+        </li>
+      </ul>
+      <address>
+        <ul>
+          <li>
+            <a href="https://twitter.com/rawfrontend" target="_blank">
+              <img src="../images/logos/twitter.png"
+                   alt="rawfrontend's Twitter account">
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/rawfrontend" target="_blank">
+              <img src="../images/logos/github.png"
+                   alt="rawfrontend's GitHub account">
+            </a>
+          </li>
+        </ul>
+      </address>
+    </div>
+  </nav>
+
+  <main>
+    <article>
+      <header class="center">
+        <div>
+          <a href="index.html">
+            <abbr title="Cascading Style Sheets">CSS</abbr>
+          </a>
+          <h2>iPhone "auto" zoom in landscape orientation</h2>
+        </div>
+      </header>
+      <footer class="center">
+        <p>
+          <span class="material-icons">today</span>
+          <time datetime="2022-01-05">
+            <abbr title="January">JAN</abbr> 05, 2022
+          </time>
+        </p>
+      </footer>
+      <figure>
+<pre>
+<code><span class="property">-webkit-text-size-adjust</span>: <span class="value">none</span>;</code>
+<code><span class="property">text-size-adjust</span>: <span class="value">none</span>;</code>
+</pre>
+      </figure>
+      <div class="center">
+        <p>
+          Due to the way mobile browsers render web pages (as described in the
+          <a href="../html/responsive-meta.html#mobile-rendering">quoted paragraph in the previews article</a>),
+          some smartphones and tablets apply a text inflation algorithm to
+          enlarge the text to make it more readable. Mobile Safari, for example,
+          often zooms the page when changing from portrait to landscape
+          orientation. The
+          <code><span class="property">text-size-adjust</span></code> property
+          allows web authors to disable or modify this behavior.
+        </p>
+        <p>
+          On a properly designed responsive website (like this one aims to be)
+          that "auto" zoom behavior is not needed. Thus, I've applied
+          <code><span class="property">text-size-adjust</span></code> to the
+          <code><span class="punctuation">&lt;</span><span class="tag-name">body</span><span class="punctuation">&gt;</span></code>
+          element and set it to
+          <code><span class="value">none</span></code></code> to simply disable
+          the mobile browser's inflation algorithm. This property is
+          intentionally repeated on the first line of the code above and is
+          preceded by the vendor prefix
+          <code><span class="property">-webkit-</span></code>, to be able to
+          work in a few mobile browsers like Safari on iOS.
+        </p>
+        <p>
+          It is important to note that this property is an
+          <b>experimental technology</b>, so it has some browser compatibility
+          issues and its behavior might change in the future.
+        </p>
+        <p>
+          There is (at least) one alternative, but I think it <em>should</em> be
+          avoided. It's by adding a
+          <code><span class="string">maximum-scale=1</span></code> value to the
+          <code><span class="attribute">content</span></code> attribute of the
+          <a href="../html/responsive-meta.html">viewport meta tag</a>. This
+          prevents the landscape zooming on the iPhone, but it also has the
+          probably unwanted side effect of preventing users from zooming in,
+          which is important for accessibility and usability.
+        </p>
+        <aside>
+          <h3>RELATED LINKS</h3>
+          <ul>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust"
+                 target="_blank">
+                 The <b>text-size-adjust</b> property
+              </a>
+            </li>
+            <li>
+              <a href="https://caniuse.com/?search=text-size-adjust"
+                 target="_blank">
+                 Caniuse
+              </a>
+            </li>
+          </ul>
+        </aside>
+        <aside>
+          <div></div>
+          <p><sup>1</sup> 2nd generation running iOS 15.2</p>
+        </aside>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <p><small>&copy; 2022 rawfrontend</small></p>
+  </footer>
+</body>
+</html>

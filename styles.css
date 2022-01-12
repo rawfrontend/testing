@@ -1,0 +1,489 @@
+html {
+  color: #d9d9d9; /* hsl(0, 0%, 85%) */
+}
+
+html, nav .material-icons, .previews div a:hover, .highlight {
+  background: #0d0d0d; /* hsl(0, 0%, 5%) */
+}
+
+body, :checked ~ div, address ul, .screenshot {
+  display: flex;
+}
+
+body, :checked ~ div {
+  flex-flow: column;
+}
+
+body {
+  font: 1.125em/1 Arsenal, sans-serif; /* 18px */
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body, h1, input, ul, h3, article h2, blockquote {
+  margin: 0;
+}
+
+h1, input, nav .material-icons, nav div {
+  position: absolute;
+}
+
+h1 {
+  top: 11px;
+  right: 71px; /* 71px = 9 + 44 + (2 x 9) */
+}
+
+h1, nav p {
+  font-size: 1.5rem; /* 24px */
+}
+
+h1 a, nav p a, nav div li a, :checked ~ .material-icons:nth-of-type(2) {
+  display: block;
+}
+
+a, abbr {
+  text-decoration: none;
+}
+
+a, i, .fig-number {
+  font-weight: 700;
+}
+
+a, .material-icons, li a:hover, .previews div a:hover, .highlight {
+  color: #df7020; /* hsl(25, 75%, 50%) */
+}
+
+h1 a, nav p a {
+  padding: 8px 0;
+}
+
+.raw, figcaption a, aside li a {
+  font-weight: 400;
+}
+
+.raw, #readme time {
+  font-style: italic;
+}
+
+.raw, footer .material-icons, .fig-number, sup {
+  color: #9c4e16; /* hsl(25, 75%, 35%) */
+}
+
+.raw {
+  font-size: 1.375rem; /* 22px */
+  margin-right: .1em;
+}
+
+nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+input, nav .material-icons {
+  top: .625rem; /* 10px */
+  right: .625rem; /* 10px */
+}
+
+input {
+  width: 42px;
+  height: 42px;
+  /* border-radius: 50%; // clickable area circled or squared (default)? */
+  opacity: 0;
+  cursor: pointer;
+}
+
+:checked, nav .material-icons:nth-of-type(2) {
+  top: .5625rem; /* 9px */
+  right: .5625rem; /* 9px */
+}
+
+:checked {
+  width: 44px;
+  height: 44px;
+}
+
+nav .material-icons, address li a {
+  padding: 8px;
+}
+
+nav .material-icons, .previews div a, aside:first-of-type {
+  border: solid 1px #592d0d; /* hsl(25, 75%, 20%) */
+}
+
+nav .material-icons, figure img {
+  z-index: -1;
+}
+
+nav .material-icons {
+  border-radius: 50%;
+  box-shadow: 0 0 10px #0d0d0d; /* hsl(0, 0%, 5%) */
+}
+
+nav .material-icons:nth-of-type(2), nav div, :checked + span {
+  display: none;
+}
+
+nav .material-icons:nth-of-type(2) {
+  border-width: 2px;
+  box-shadow: none;
+}
+
+nav .material-icons:nth-of-type(2), nav div {
+  background: #000;
+}
+
+nav div {
+  right: 0;
+  z-index: -2;
+  /* width: 100vw; full screen? */
+  height: 100vh;
+  box-shadow: 0 0 0 100vw rgba(0, 0, 0, .5);
+}
+
+nav p {
+  margin: 11px 71px 11px 18px; /* 71px = 9 + 44 + (2 x 9) */
+}
+
+div > ul {
+  flex: auto; /* 1 1 auto */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav div ul, div > ul li:not(:first-child) a, aside li:not(:first-child),
+aside div {
+  border-top: solid 1px;
+}
+
+nav div ul, aside li:not(:first-child) {
+  border-color: #2d1606; /* hsl(25, 75%, 10%) */
+}
+
+nav div ul, pre {
+  overflow: scroll;
+}
+
+li a, .previews figure, .previews article > p, .previews article div,
+body > footer {
+  text-align: center;
+}
+
+div > ul a {
+  color: #ccc; /* hsl(0, 0%, 80%) */
+  padding: .75rem; /* 12px */
+}
+
+div > ul li:not(:first-child) a {
+  border-color: #0d0d0d; /* hsl(0, 0%, 5%) */
+}
+
+address ul {
+  justify-content: center;
+  padding: 7px;
+}
+
+address a, figure, blockquote span,
+main > article div:first-of-type > p:first-of-type::first-letter {
+  line-height: 0;
+}
+
+div a img {
+  width: 32px;
+  opacity: .3;
+}
+
+div a img:hover {
+  opacity: .6;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+section > header {
+  margin: 0 7.5vw; /* 5vw + 2.5vw */
+}
+
+#readme > header {
+  margin: 0 10%;
+}
+
+section > header h2, .previews div a {
+  display: inline-block;
+}
+
+section > header h2 {
+  font-size: 1em;
+  padding: 0 .5em .25em;
+  border-bottom: solid 2px #df7020; /* hsl(25, 75%, 50%) */
+  border-radius: 2px;
+  margin: 6.25rem 5% 0; /* 100px */
+}
+
+#readme h2 {
+  margin: 6.25rem 0 0; /* 100px */
+}
+
+.previews article {
+  padding: 5% 2.5vw;
+  border: solid 2px #2d1606; /* hsl(25, 75%, 10%) */
+  border-radius: 25px;
+  margin: 5vh 5vw;
+  box-shadow: 0 0 10px #000;
+}
+
+article > :not(.screenshot), #readme {
+  max-width: 60ch;
+}
+
+section:not(#readme) article header, aside div + p {
+  margin: 0 5%;
+}
+
+header div {
+  margin: 6.25rem 10% 0;
+}
+
+h3, article h2 {
+  font-size: 2rem; /* 32px */
+}
+
+h3, article footer p, article h2, figcaption, aside ul, aside div ~ p {
+  line-height: 1.25;
+}
+
+#readme h3 {
+  margin: 5vh 10% 1.859375rem; /* 29.75px */
+}
+
+footer p, aside p {
+  font-size: .875rem; /* 14px */
+}
+
+article footer p {
+  color: #8c8c8c; /* hsl(0, 0%, 55%) */
+  margin: .25rem calc(10% - 1px) 0; /* 4px */
+}
+
+.previews footer p {
+  margin: .25rem calc(5% - 1px) 0; /* 4px */
+}
+
+footer .material-icons {
+  font-size: 1.125rem; /* 18px */
+  vertical-align: -30%;
+}
+
+figure {
+  margin: 2.109375rem auto; /* 33.75px */
+}
+
+.previews figure {
+  margin: 5% 0;
+}
+
+.previews img {
+  max-width: 798px; /* 1596px / 2 */
+}
+
+.previews article > p, #readme footer p {
+  line-height: 1.5;
+  margin: 5% 2.5%;
+}
+
+.previews div a {
+  color: #0d0d0d; /* hsl(0, 0%, 5%) */
+  background: #df7020; /* hsl(25, 75%, 50%) */
+  padding: 1em 2em;
+  border-color: transparent;
+  border-radius: 5px;
+}
+
+.previews div a:hover {
+  border-color: #df7020; /* hsl(25, 75%, 50%) */
+}
+
+pre, p code, figcaption, .fig-number, aside ul, #readme footer p {
+  font-size: 1rem;
+}
+
+pre {
+  max-width: 100vw;
+  background: #1a1a1a; /* hsl(0, 0%, 10%) */
+  padding: 1.125rem 5%; /* 18px */
+  /* margin: 0; */
+}
+
+pre, aside:first-of-type {
+  border-radius: 10px;
+}
+
+code {
+  font: 1em/1.375 Cousine, monospace;
+}
+
+.punctuation {
+  color: #2f4f4f; /* darkslategray */
+}
+
+.tag-name {
+  color: #7b68ee; /* mediumslateblue */
+}
+
+.attribute, .property {
+  color: #4682b4; /* steelblue */
+}
+
+.string, .value {
+  color: #daa520; /* goldenrod */
+}
+
+main p {
+  line-height: 1.75;
+  margin: 1.5em 5%; /* 27px */
+}
+
+main > article div:first-of-type > p:first-of-type::first-letter,
+blockquote span {
+  float: left;
+}
+
+main > article div:first-of-type > p:first-of-type::first-letter {
+  font-size: 4.25rem; /* 68px */
+  margin: 1.75rem 5px 1.875rem 0; /* 28px 5px 30px */
+}
+
+.screenshot {
+  flex-flow: wrap;
+  justify-content: space-evenly;
+  max-width: 1038px; /* 1038px - 894px = 144px; 144px / 3 = 48px; 48px = 24px * 2 */
+}
+
+figure img {
+  position: relative; /* along with z-index, apparently avoids a problem with multiple checks/unchecks of the input when it's over an img */
+  width: 100%;
+}
+
+.screenshot img {
+  max-width: 375px;
+}
+
+.screenshot img:nth-child(2) {
+  margin-top: 40px;
+}
+
+figcaption, aside p {
+  color: #a6a6a6; /* hsl(0, 0%, 65%) */
+}
+
+figcaption {
+  flex: 100%; /* 1 1 100% */
+  margin: 1.25em 10% 0; /* 20px */
+}
+
+sup, small {
+  font-size: .75rem; /* 12px */
+}
+
+.quote, aside:first-of-type {
+  border-left: solid 2px #9c4e16; /* hsl(25, 75%, 35%) */
+  margin: 2.109375rem 5%; /* 33.75px */
+}
+
+blockquote p {
+  margin: 1.5em 0 1rem 1rem; /* 27px */
+}
+
+blockquote span {
+  font-size: 4.875rem; /* 78px */
+  margin-top: 1.9375rem; /* 31px */
+}
+
+blockquote span:nth-of-type(2) {
+  float: right;
+  margin-top: 2.4375rem; /* 39px */
+}
+
+.quote figcaption {
+  margin: 0 1rem;
+}
+
+article a:hover {
+  color: #efb78f; /* hsl(25, 75%, 75%) */
+}
+
+aside:first-of-type {
+  border-color: #9c4e16; /* hsl(25, 75%, 35%) */
+}
+
+aside h3 {
+  font-size: 1.25rem; /* 20px */
+  margin: 5% 5% 0;
+}
+
+aside ul {
+  margin: 2.5% 5%;
+}
+
+aside li {
+  padding: 2.5% 0;
+}
+
+aside div {
+  width: 25%;
+  border-color: #592d0d; /* hsl(25, 75%, 20%) */
+  margin: 3.375rem 5% 2.5%; /* 54px = 40.5 + (40.5 * 1/3) */
+}
+
+#readme footer p {
+  text-align: right;
+  margin: 2.5em 5% 0;
+}
+
+#readme footer > p {
+  margin-top: 0;
+}
+
+body > footer p {
+  line-height: .75;
+  color: #666; /* hsl(0, 0%, 40%) */
+  margin: 20vh 5% 1.5em; /* 27px */
+}
+
+.unavailable, .unavailable:hover {
+  color: rgba(204, 204, 204, .2);
+}
+
+@media screen and (min-width: 750px) {
+  .screenshot {
+    margin: 2.109375rem 24px; /* 33.75px */
+  }
+  .screenshot img {
+    margin: 0 24px;
+  }
+}
+
+@media screen and (min-width: 798px) {
+  section > header {
+    margin: 0 15vw; /* 10vw + 5vw */
+  }
+  .previews article {
+    padding: 5% 10vw;
+  }
+}
+
+@media screen and (min-width: 894px) {
+  .screenshot img:nth-child(2) {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 1039px) {
+  .screenshot {
+    margin: 2.109375rem auto; /* 33.75px */
+  }
+}

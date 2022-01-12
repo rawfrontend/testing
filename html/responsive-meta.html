@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <meta name="color-scheme" content="dark light"> // does it work? -->
+  <title>The responsive meta element | HTML | rawfrontend</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Cousine&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="../styles.css">
+  <script async src="../scripts.js"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+  <link rel="manifest" href="../favicon/site.webmanifest">
+  <meta name="description" content="Setting the viewport is a crucial first step in a Responsive Web Design strategy.">
+  <meta name="author" content="Pedro F. Soares">
+</head>
+
+<body>
+  <header>
+    <h1>
+      <a href="../index.html"><span class="raw">raw</span>frontend</a>
+    </h1>
+  </header>
+
+  <nav>
+    <input type="checkbox">
+    <span class="material-icons">menu</span>
+    <span class="material-icons">close</span>
+    <div>
+      <p>
+        <a href="../index.html"><span class="raw">raw</span>frontend</a>
+      </p>
+      <ul>
+        <li>
+          <a href="../index.html">ALL ARTICLES</a>
+        </li>
+        <li>
+          <a href="index.html">
+            <abbr title="HyperText Markup Language">HTML</abbr>
+          </a>
+        </li>
+        <li>
+          <a href="../css/index.html">
+            <abbr title="Cascading Style Sheets">CSS</abbr>
+          </a>
+        </li>
+        <li>
+          <a class="unavailable">
+            <abbr>HTML</abbr> + <abbr>CSS</abbr>
+          </a>
+        </li>
+        <li>
+          <a class="unavailable">JAVASCRIPT</a>
+        </li>
+        <li>
+          <a href="../readme.html">README</a>
+        </li>
+      </ul>
+      <address>
+        <ul>
+          <li>
+            <a href="https://twitter.com/rawfrontend" target="_blank">
+              <img src="../images/logos/twitter.png"
+                   alt="rawfrontend's Twitter account">
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/rawfrontend" target="_blank">
+              <img src="../images/logos/github.png"
+                   alt="rawfrontend's GitHub account">
+            </a>
+          </li>
+        </ul>
+      </address>
+    </div>
+  </nav>
+
+  <main>
+    <article>
+      <header class="center">
+        <div>
+          <a href="index.html">
+            <abbr title="HyperText Markup Language">HTML</abbr>
+          </a>
+          <h2>The responsive meta element</h2>
+        </div>
+      </header>
+      <footer class="center">
+        <p>
+          <span class="material-icons">today</span>
+          <time datetime="2022-01-05">
+            <abbr title="January">JAN</abbr> 05, 2022
+          </time>
+        </p>
+      </footer>
+      <figure>
+<pre>
+<code><span class="punctuation">&lt;</span><span class="tag-name">meta</span> <span class="attribute">name</span>=<span class="string">"viewport"</span>
+      <span class="attribute">content</span>=<span class="string">"width=device-width,
+               initial-scale=1"</span><span class="punctuation">&gt;</span></code>
+</pre>
+      </figure>
+      <div class="center">
+        <p>
+          When I wrote my very first lines of
+          <abbr title="HyperText Markup Language">HTML</abbr> and
+          <abbr title="Cascading Style Sheets">CSS</abbr> code, my immediate
+          priority was to (obviously) check its output on a web browser. As I
+          expected, that super simple document was rendered seamlessly on the
+          laptop. But when I've tested it on a smartphone, that same document
+          seemed to be somehow scaled down. The
+          <code><span class="punctuation">&lt;</span><span class="tag-name">meta</span><span class="punctuation">&gt;</span></code>
+          element above, also known as <i>viewport meta tag</i>, fixes that
+          unexpected behavior of mobile browsers.
+        </p>
+        <p>
+          Before explaining what it does exactly, the following two screenshots
+          illustrate the difference between an
+          <abbr title="HyperText Markup Language">HTML</abbr> document rendered
+          <em>without</em> (1st) and <em>with</em> (2nd) the viewport meta tag.
+        </p>
+      </div>
+      <figure class="screenshot">
+        <img src="../images/responsive-meta-off.png"
+             alt="iPhone screenshot of this web page rendered without the
+                  viewport meta tag (scaled down).">
+        <img src="../images/responsive-meta-on.png"
+             alt="iPhone screenshot of this web page rendered with the viewport
+                  meta tag (full size).">
+        <figcaption>
+          <span class="fig-number">FIGURE 1 |</span> iPhone SE<sup>1</sup>
+          screenshots of this web page rendered in Safari <em>without</em> (1st)
+          and <em>with</em> (2nd) the viewport meta tag.
+        </figcaption>
+      </figure>
+      <div class="center">
+        <p>
+          It is hard to read the text from the first screenshot without zooming,
+          isn't it? Well, to give an accurate description of what's happening
+          behind the scenes, there's nothing better than "listen" to an expert!
+          (The following quote is taken from one of the first books I've read
+          about Web Design and is still an excellent reference.)
+        </p>
+        <figure id="mobile-rendering" class="quote">
+          <blockquote>
+            <p>
+              <span>&ldquo;</span><br>
+              To fit standard websites onto small screens, mobile browsers
+              render the page on a canvas called the <i>viewport</i> and then
+              shrink that viewport down to fit the width of the screen
+              (<i>device width</i>). For example, on iPhones, mobile Safari sets
+              the viewport width to 980 points [...], so a web page is rendered
+              as though it were on a desktop browser window set to 980 pixels
+              wide. That rendering gets shrunk down to the width of the screen
+              (ranging from 320 to 414 points, depending on the iPhone model),
+              cramming a lot of information into a tiny space.<br>
+              <span>&rdquo;</span><br>
+            </p>
+          </blockquote>
+          <figcaption>
+            <a href="https://www.oreilly.com/library/view/learning-web-design/9781491960196/"
+               target="_blank">
+              <cite>Learning Web Design</cite></a>, 5th Edition (O'Reilly), by
+              Jennifer Robbins
+          </figcaption>
+        </figure>
+        <p>
+          So, how can the default rendering of mobile browsers be changed? Is it
+          possible to match the size of the viewport with the size of the device
+          screen? Yes, it is! It's through the already mentioned
+          <code><span class="punctuation">&lt;</span><span class="tag-name">meta</span><span class="punctuation">&gt;</span></code>
+          element, by setting the
+          <code><span class="attribute">name</span></code> attribute to
+          <code><span class="string">viewport</span></code>. It is then followed
+          by the <code><span class="attribute">content</span></code> attribute,
+          which gets 2 values:
+          <code><span class="string">width=device-width</span></code> &mdash;
+          sets the width of the viewport equal to the width of the device
+          screen; and <code><span class="string">initial-scale=1</span></code>
+          &mdash; sets the zoom level to 1 (100%). This makes the rendered web
+          page to appear on the screen at full size
+          (<span class="fig-number">FIGURE 1</span>) and it allows, for example,
+          to test for the width with <i>media queries</i>. Therefore, setting
+          the viewport is a crucial first step in a <i>Responsive Web Design</i>
+          strategy.
+        </p>
+        <p>
+          Although the viewport meta tag (introduced by Apple in mobile Safari)
+          is <em>not</em> part of any web standard, it is supported by most
+          mobile browsers. For further information or technical details, check
+          the links in the note bellow.
+        </p>
+        <aside>
+          <h3>RELATED LINKS</h3>
+          <ul>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag"
+                 target="_blank">
+                How to use the <b>viewport meta tag</b> to control layout on
+                mobile browsers
+              </a>
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_other_specifications"
+                 target="_blank">
+                All possible values for the <b>content attribute</b>
+              </a>
+            </li>
+            <li>
+              <a href="https://alistapart.com/article/responsive-web-design/"
+                 target="_blank">
+                First time the phrase <q><b>Responsive Web Design</b></q> was
+                used in an article written by Ethan Marcotte in 2010
+              </a>
+            </li>
+          </ul>
+        </aside>
+        <aside>
+          <div></div>
+          <p><sup>1</sup> 2nd generation running iOS 15.2</p>
+        </aside>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <p><small>&copy; 2022 rawfrontend</small></p>
+  </footer>
+</body>
+</html>

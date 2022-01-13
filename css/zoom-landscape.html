@@ -86,7 +86,7 @@
           <a href="index.html">
             <abbr title="Cascading Style Sheets">CSS</abbr>
           </a>
-          <h2>iPhone "auto" zoom in landscape orientation</h2>
+          <h2>iPhone auto "zoom" in landscape orientation</h2>
         </div>
       </header>
       <footer class="center">
@@ -106,8 +106,8 @@
       <div class="center">
         <p>
           Due to the way mobile browsers render web pages (as described in the
-          <a href="../html/responsive-meta.html#mobile-rendering">quoted paragraph in the previews article</a>),
-          some smartphones and tablets apply a text inflation algorithm to
+          <a href="../html/responsive-meta.html#mobile-rendering">quoted paragraph in the previous article</a>),
+          some smartphones and tablets apply a <b>text inflation algorithm</b> to
           enlarge the text to make it more readable. Mobile Safari, for example,
           often zooms the page when changing from portrait to landscape
           orientation. The
@@ -116,19 +116,18 @@
         </p>
         <p>
           On a properly designed responsive website (like this one aims to be)
-          that "auto" zoom behavior is not needed. Thus, I've applied
+          that automatic "zoom" is not needed. Thus, I've applied
           <code><span class="property">text-size-adjust</span></code> to the
           <code><span class="punctuation">&lt;</span><span class="tag-name">body</span><span class="punctuation">&gt;</span></code>
           element and set it to
           <code><span class="value">none</span></code></code> to simply disable
-          the mobile browser's inflation algorithm. This property is
-          intentionally repeated on the first line of the code above and is
-          preceded by the vendor prefix
-          <code><span class="property">-webkit-</span></code>, to be able to
-          work in a few mobile browsers like Safari on iOS.
+          the browser's inflation algorithm. This property is intentionally
+          repeated on the first line of the code above and is preceded by the
+          vendor prefix <code><span class="property">-webkit-</span></code>, to
+          be able to work in a few mobile browsers like Safari on iOS.
         </p>
         <p>
-          It is important to note that this property is an
+          It is relevant to note that this property is an
           <b>experimental technology</b>, so it has some browser compatibility
           issues and its behavior might change in the future.
         </p>
@@ -148,13 +147,13 @@
             <li>
               <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust"
                  target="_blank">
-                 The <b>text-size-adjust</b> property
+                 The <b>text-size-adjust</b> <abbr>CSS</abbr> property
               </a>
             </li>
             <li>
               <a href="https://caniuse.com/?search=text-size-adjust"
                  target="_blank">
-                 Caniuse
+                 Browser support for <b>text-size-adjust</b>
               </a>
             </li>
           </ul>
